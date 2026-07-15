@@ -9,4 +9,3 @@ def process_packet(packet):
         except IndexError:
             pass
 
-# sniff(store=False, filter="arp", prn=process_packet)  # run with admin/root

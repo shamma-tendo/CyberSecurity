@@ -17,5 +17,3 @@ def crack_hash(target_hash, wordlist_file, algo="sha256", workers=8):
                 return result
     return None
 
-# Example: create your own test hash & wordlist to audit password policies
-# result = crack_hash(target_hash, "rockyou_sample.txt")

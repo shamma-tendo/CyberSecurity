@@ -12,5 +12,3 @@ def verify_2fa(secret, code):
     return totp.verify(code)
 
 secret = setup_2fa()
-# In a real app, user enters this from their authenticator app
-# print(verify_2fa(secret, "123456"))

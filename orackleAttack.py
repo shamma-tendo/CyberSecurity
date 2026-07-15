@@ -18,8 +18,5 @@ class PaddingOracleServer:
             return False
         return True  # GOOD PADDING
 
-# The attack: flip bytes in ciphertext, observe whether padding check passes/fails,
-# use timing/response differences to decrypt byte-by-byte WITHOUT the key.
-# This is why constant-time comparison + authenticated encryption (AES-GCM) exist.
 print("This demonstrates why CBC mode without HMAC/AEAD is dangerous.")
 print("Real fix: use AES-GCM or encrypt-then-MAC, and never leak padding validity to attackers.")

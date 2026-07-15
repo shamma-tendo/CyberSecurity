@@ -19,4 +19,3 @@ def encode_message(image_path, message, output_path):
     encoded.save(output_path)
     print(f"Message hidden in {output_path}")
 
-# encode_message("input.png", "meet at midnight", "output.png")
