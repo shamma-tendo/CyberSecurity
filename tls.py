@@ -21,7 +21,7 @@ def check_tls_certificate(hostname, port=443):
             print(f"Cipher: {ssock.cipher()}")
 
             if days_left < 30:
-                print("⚠️  Certificate expiring soon!")
+                print("  Certificate expiring soon!")
 
             return cert
 
