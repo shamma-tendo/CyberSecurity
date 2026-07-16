@@ -11,5 +11,5 @@ def decode_jwt(token):
     print("Payload:", pad_decode(payload))
     print("Signature (still encoded):", signature)
 
-# Try with any JWT from jwt.io
+
 decode_jwt("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4ifQ.abc123")
