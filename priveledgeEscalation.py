@@ -3,7 +3,7 @@ import stat
 import subprocess
 
 def check_suid_binaries():
-    """Find SUID binaries — a classic privesc vector if misconfigured"""
+
     suspicious = []
     common_dirs = ["/usr/bin", "/usr/sbin", "/bin", "/sbin"]
     for directory in common_dirs:
@@ -19,6 +19,9 @@ def check_suid_binaries():
     return suspicious
 
 def check_world_writable_files(directory="/etc"):
+
+
+    
     """World-writable config files are a red flag"""
     findings = []
     for root, dirs, files in os.walk(directory):
