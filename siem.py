@@ -2,7 +2,7 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 
 class CorrelationEngine:
-    def __init__(self, correlation_window=300):  # 5 min window
+    def __init__(self, correlation_window=300):  
         self.events = defaultdict(list)
         self.window = timedelta(seconds=correlation_window)
 
