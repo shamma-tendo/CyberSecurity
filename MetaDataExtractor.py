@@ -12,4 +12,3 @@ def extract_metadata(image_path):
         tag = TAGS.get(tag_id, tag_id)
         print(f"{tag}: {value}")
 
-# extract_metadata("photo.jpg")
