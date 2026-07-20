@@ -5,7 +5,7 @@ import traceback
 def fuzz_function(target_func, iterations=1000):
     crashes = []
     for i in range(iterations):
-        # Generate random/malformed input
+ 
         input_type = random.choice(["string", "int", "bytes", "empty", "huge"])
         if input_type == "string":
             test_input = ''.join(random.choices(string.printable, k=random.randint(0, 50)))
