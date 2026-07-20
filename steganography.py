@@ -4,7 +4,7 @@ def encode_message(image_path, message, output_path):
     img = Image.open(image_path)
     encoded = img.copy()
     width, height = img.size
-    message += chr(0)  # null terminator
+    message += chr(0) 
     binary_msg = ''.join(format(ord(c), '08b') for c in message)
 
     data_index = 0
