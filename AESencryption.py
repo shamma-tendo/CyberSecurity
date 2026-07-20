@@ -10,7 +10,7 @@ def aes_encrypt(plaintext: bytes, key: bytes):
     cipher = Cipher(algorithms.AES(key), modes.CBC(iv))
     encryptor = cipher.encryptor()
     ciphertext = encryptor.update(padded_data) + encryptor.finalize()
-    return iv + ciphertext  # prepend IV for use in decryption
+    return iv + ciphertext 
 
 def aes_decrypt(data: bytes, key: bytes):
     iv, ciphertext = data[:16], data[16:]
