@@ -13,10 +13,10 @@ class PaddingOracleServer:
         
         pad_len = plaintext[-1]
         if pad_len < 1 or pad_len > 16:
-            return False  # BAD PADDING (this leak is the vulnerability)
+            return False #   bad padding(this leak is the vulnerability)
         if plaintext[-pad_len:] != bytes([pad_len] * pad_len):
             return False
-        return True  # GOOD PADDING
+        return True  #good-padding
 
 print("This demonstrates why CBC mode without HMAC/AEAD is dangerous.")
 print("Real fix: use AES-GCM or encrypt-then-MAC, and never leak padding validity to attackers.")
